@@ -15,7 +15,7 @@ from imblearn.over_sampling import SMOTE
 from imblearn.pipeline import Pipeline
 
 # === 1. Cargar dataset ===
-data = pd.read_excel("uploads/DEMALE-HSJM_2025_data (1).xlsx")
+data = pd.read_excel("uploads/DEMALE-HSJM_2025_data.xlsx")
 
 # === 2. Variable objetivo ===
 target = "diagnosis"
@@ -88,3 +88,4 @@ with open("models/modelo_logistica_balanceado.pkl", "wb") as f:
     pickle.dump(pipeline, f)
 
 print(" Modelo balanceado guardado exitosamente en /models/modelo_logistica_balanceado.pkl")
+
