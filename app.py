@@ -26,7 +26,7 @@ RNA_MODEL = os.path.join(MODEL_DIR, "modelo_rna.pkl")
 RNA_SCALER = os.path.join(MODEL_DIR, "escalador_rna.pkl")
 
 # --- lee dataset base para inferir rangos ---
-DATASET_PATH = os.path.join("uploads", "DEMALE-HSJM_2025_data (1).xlsx")
+DATASET_PATH = os.path.join("uploads", "DEMALE-HSJM_2025_data.xlsx")
 df = pd.read_excel(DATASET_PATH)
 
 if "diagnosis" in df.columns:
@@ -336,4 +336,5 @@ def index():
     return render_template("index.html")
 
 if __name__ == "__main__":
+
     app.run(debug=True)
