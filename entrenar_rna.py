@@ -10,7 +10,7 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 
 # === 1. Cargar dataset ===
-data = pd.read_excel("uploads/DEMALE-HSJM_2025_data (1).xlsx")
+data = pd.read_excel("uploads/DEMALE-HSJM_2025_data.xlsx")
 
 # === 2. Variable objetivo ===
 target = "diagnosis"
@@ -71,5 +71,6 @@ with open("models/modelo_rna.pkl", "wb") as f:
     pickle.dump(modelo_rna, f)
 with open("models/escalador_rna.pkl", "wb") as f:
     pickle.dump(scaler, f)
+
 
 print(" Modelo RNA guardado exitosamente en /models/")
